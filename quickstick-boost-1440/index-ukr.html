@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ua"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Thomas Quick Stick Boost</title>
+</head>
+<body>
+  <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+.tms-img-resp {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.tms-main-title {
+  font-family: Roboto, sans-serif;
+  font-size: 56px;
+  font-weight: 400;
+  color: #455B66;
+}
+
+.tms-h1 {
+  font-family: Roboto, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #455B66;
+  line-height: 1.2;
+}
+
+.tms-h2 {
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #455B66;
+  line-height: 1.2;
+}
+
+.tms-h3 {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #455B66;
+  line-height: 180%;
+}
+
+.tms-p {
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #455B66;
+  line-height: 180%;
+}
+
+.tms-main-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tms-wrap {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.tms-i {
+  position: relative;
+  display: block;
+  text-align: left;
+  padding-left: 20px;
+}
+.tms-i:before {
+  content: " ";
+  left: 0;
+  top: 9px;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: #455B66;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tms-youtube-button {
+  background: url(img/tms-youtube-icon.svg) left 20px center no-repeat;
+  background-size: auto 20px;
+  display: inline-block;
+  padding: 20px 20px 20px 60px;
+  border: 2px solid #455B66;
+  text-decoration: none;
+  position: relative;
+  outline: none;
+  transition: background-color 0.3s ease;
+  text-align: left;
+}
+.tms-youtube-button:focus, .tms-youtube-button:hover {
+  text-decoration: none;
+}
+.tms-youtube-button:hover {
+  color: #fff;
+  background-color: #455B66;
+}
+.tms-youtube-button:active {
+  color: #fff;
+  background-color: #5a7684;
+}
+
+.tms-youtube-card {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+}
+.tms-youtube-card:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(img/tms-youtube-icon.svg) center no-repeat;
+}
+.tms-youtube-card:hover {
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tms-card {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+}
+
+.tms-section-1 {
+  background: url(img/tms-section-1-bg.jpg) center bottom no-repeat;
+  background-size: cover;
+}
+.tms-section-1 .tms-wrap {
+  margin-top: 0;
+  padding: 100px 0 150px 0;
+}
+.tms-section-1 .tms-logo {
+  text-align: center;
+}
+.tms-section-1 .tms-content {
+  padding-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  align-items: start;
+  justify-items: center;
+}
+.tms-section-1 .tms-content .tms-item-1 img {
+  min-height: 529px;
+}
+.tms-section-1 .tms-content .tms-item-2 {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+}
+.tms-section-1 .tms-content .tms-item-2 .tms-button {
+  padding-top: 25px;
+}
+
+.tms-section-2 .tms-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.tms-section-2 .tms-content__item {
+  margin: 25px 0px;
+  text-align: center;
+  flex: 1 calc(20% - 20px);
+}
+.tms-section-2 .tms-content__item .tms-content__icon {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.tms-section-2 .tms-content__item .tms-p {
+  margin-top: 20px;
+}
+
+.tms-section-3 .tms-header {
+  text-align: center;
+  margin: 100px 0 50px 0;
+}
+.tms-section-3 .tms-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.tms-section-4 .tms-header, .tms-section-5 .tms-header {
+  text-align: center;
+  margin: 100px 0 50px 0;
+}
+.tms-section-4 .tms-content, .tms-section-5 .tms-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.tms-section-4 .tms-content .tms-bottom, .tms-section-5 .tms-content .tms-bottom {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.tms-section-6 .tms-header {
+  text-align: center;
+  margin: 100px 0 50px 0;
+}
+.tms-section-6 .tms-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.tms-section-7 {
+  padding-bottom: 100px;
+}
+.tms-section-7 .tms-header {
+  text-align: center;
+  margin: 100px 0 50px 0;
+}
+.tms-section-7 .tms-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+}
+.tms-section-7 .tms-content .tms-item {
+  text-align: center;
+  background-color: #F6F6F6;
+  padding: 20px;
+  min-height: 200px;
+  display: grid;
+  align-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .tms-section-1 .tms-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .tms-section-1 .tms-content .tms-item-1 {
+    order: 2;
+  }
+  .tms-section-1 .tms-content .tms-item-2 {
+    justify-items: center;
+    order: 1;
+  }
+  .tms-section-1 .tms-content .tms-item-2 .tms-h3 {
+    width: 90%;
+  }
+
+  .tms-section-2 .tms-content__item {
+    flex: 1 calc(30% - 20px);
+  }
+
+  .tms-section-3 .tms-content-1 .tms-item {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .tms-section-3 .tms-content, .tms-section-6 .tms-content {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .tms-wrap {
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .tms-main-title {
+    font-size: 48px;
+  }
+
+  .tms-section-1 .tms-content {
+    padding-top: 50px;
+  }
+  .tms-section-1 .tms-content .tms-item-1 {
+    grid-gap: 20px;
+  }
+  .tms-section-1 .tms-content .tms-item-2 .tms-main-title {
+    text-align: center;
+  }
+
+  .tms-section-2 .tms-content__item {
+    flex: 1 calc(100% - 20px);
+  }
+
+  .tms-section-4 .tms-content, .tms-section-5 .tms-content {
+    grid-template-columns: 1fr;
+  }
+
+  .tms-section-7 {
+    padding-bottom: 50px;
+  }
+  .tms-section-7 .tms-content {
+    grid-template-columns: 1fr;
+  }
+  .tms-section-7 .tms-content .tms-item:last-child {
+    width: 100%;
+  }
+}
+  </style>
+  <div class="tms-main-container">
+    <div class="tms-section-1">
+      <div class="tms-wrap">
+        <div class="tms-logo"><img src="img/tms-logo-germany.svg" alt="Thomas"/></div>
+        <div class="tms-content">
+          <div class="tms-item-1"><img class="tms-img-resp" src="img/tms-section-1-vc.png" alt="Thomas Quick Stick Boost"/></div>
+          <div class="tms-item-2">
+            <div class="tms-h2">Бездротовий пилосос</div>
+            <div class="tms-main-title">Quick Stick <strong>Boost</strong></div>
+            <div class="tms-h3">Ідеальна чистота швидко і просто. Якісне прибирання всіх поверхонь у домі, а також ефективне чищення салону автомобіля.</div>
+            <div class="tms-button"><a class="tms-youtube-button tms-p" href="https://thomas.ua/r/1699" target="_blank">Відео огляд пилососа Quick Stick Boost</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tms-section-2">
+      <div class="tms-wrap">
+        <div class="tms-content">
+          <div class="tms-content__item">
+            <div class="tms-content__icon"><img class="tms-img-resp" src="img/tms-section-2-icon-1.svg" alt="Необмежений радіус дії"/></div>
+            <div class="tms-p">Необмежений радіус дії</div>
+          </div>
+          <div class="tms-content__item">
+            <div class="tms-content__icon"><img class="tms-img-resp" src="img/tms-section-2-icon-2.svg" alt="Простота експлуатації"/></div>
+            <div class="tms-p">Простота експлуатації</div>
+          </div>
+          <div class="tms-content__item">
+            <div class="tms-content__icon"><img class="tms-img-resp" src="img/tms-section-2-icon-3.svg" alt="Низький рівень шуму"/></div>
+            <div class="tms-p">Низький рівень шуму</div>
+          </div>
+          <div class="tms-content__item">
+            <div class="tms-content__icon"><img class="tms-img-resp" src="img/tms-section-2-icon-4.svg" alt="Швидке прибирання без підготовки"/></div>
+            <div class="tms-p">Швидке прибирання без підготовки</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tms-section-3">
+      <div class="tms-wrap">
+        <div class="tms-header">
+          <div class="tms-h1">Основні переваги</div>
+        </div>
+        <div class="tms-content">
+          <div class="tms-item"><img class="tms-img-resp tms-card" src="img/tms-section-3-img.jpg" alt="Основні переваги"/></div>
+          <div class="tms-item">
+            <div class="tms-p"><span class="tms-i">Потужний Li-Ion акумулятор з LED-індикатором заряду - до 30 хвилин роботи без підзарядки</span><br/><span class="tms-i">Режим Boost-Max - підвищена сила всмоктування для складних завдань</span><br/><span class="tms-i">Вертикальний і горизонтальний режими прибирання - комфортне очищення поверхонь на різній висоті (підлоги, меблів, стін, сходів і т.п.)</span><br/><span class="tms-i">Зручна конструкція і простий циклонний фільтр - експрес прибирання без підготовки</span><br/><span class="tms-i">Низький рівень шуму - використання в будь-який зручний час</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tms-section-4">
+      <div class="tms-wrap">
+        <div class="tms-header">
+          <div class="tms-h1">Простота прибирання</div>
+        </div>
+        <div class="tms-content">
+          <div class="tms-item">
+            <div class="tms-top tms-card"><img class="tms-img-resp" src="img/tms-section-4-img-1.jpg" alt="Зручна циклонна система фільтрації"/></div>
+            <div class="tms-bottom">
+              <div class="tms-p">Зручна циклонна система фільтрації, просте й швидке очищення пилозбірника. Додатковий змінний фільтр легко знімається і його можна мити.</div>
+            </div>
+          </div>
+          <div class="tms-item">
+            <div class="tms-top tms-card"><img class="tms-img-resp" src="img/tms-section-4-img-2.jpg" alt="Пилосос працює в двох режимах"/></div>
+            <div class="tms-bottom">
+              <div class="tms-p">Пилосос працює в двох режимах: вертикальному й ручному, що дозволяє швидко зробити прибирання всіх поверхонь в домі, а також почистити салон авто.</div>
+            </div>
+          </div>
+          <div class="tms-item">
+            <div class="tms-top tms-card"><img class="tms-img-resp" src="img/tms-section-4-img-3.jpg" alt="Для зберігання пилососа передбачено зручне настінне кріплення"/></div>
+            <div class="tms-bottom">
+              <div class="tms-p">Для зберігання пилососа передбачено зручне настінне кріплення з тримачем для насадок, тому він завжди під рукою і готовий до роботи в будь-який момент.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tms-section-5">
+      <div class="tms-wrap">
+        <div class="tms-header">
+          <div class="tms-h1">Особливості прибирання</div>
+        </div>
+        <div class="tms-content">
+          <div class="tms-item">
+            <div class="tms-top tms-card"><img class="tms-img-resp" src="img/tms-section-5-img-1.jpg" alt="Турбощітка"/></div>
+            <div class="tms-bottom">
+              <div class="tms-h2">Турбощітка</div>
+              <div class="tms-p">(повертається на 180 градусів) з LED-підсвічуванням і зручним знімним валиком із мікрофібри для ретельного сухого прибирання килимових і гладких підлогових покриттів, швидкого збирання волосся й шерсті тварин</div>
+            </div>
+          </div>
+          <div class="tms-item">
+            <div class="tms-top tms-card"><img class="tms-img-resp" src="img/tms-section-5-img-2.jpg" alt="Подовжена щілинна насадка"/></div>
+            <div class="tms-bottom">
+              <div class="tms-h2">Подовжена щілинна насадка</div>
+              <div class="tms-p">для очищення від пилу і сміття щілин між подушками меблів, стиків та ін.</div>
+            </div>
+          </div>
+          <div class="tms-item">
+            <div class="tms-top tms-card"><img class="tms-img-resp" src="img/tms-section-5-img-3.jpg" alt="Насадка 2в1"/></div>
+            <div class="tms-bottom">
+              <div class="tms-h2">Насадка 2в1</div>
+              <div class="tms-p">для ефективного прибирання м&#39;яких меблів для дбайливого очищення делікатних поверхонь (побутової техніки, полірованих меблів і т.п.)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tms-section-6">
+      <div class="tms-wrap">
+        <div class="tms-header">
+          <div class="tms-h1">Особливості конструкції</div>
+        </div>
+        <div class="tms-content">
+          <div class="tms-item"><img class="tms-img-resp tms-card" src="img/tms-section-6-img.jpg" alt="Особливості конструкції"/></div>
+          <div class="tms-item">
+            <div class="tms-p"><span class="tms-i">Мобільність і необмежений радіус дії</span><br/><span class="tms-i">Сучасний цифровий мотор</span><br/><span class="tms-i">Кнопка Boost-Max для включення посиленої потужності</span><br/><span class="tms-i">Блокування курка для зручності руки під час роботи</span><br/><span class="tms-i">Маневреність і компактність</span><br/><span class="tms-i">Вертикальний і ручний режими роботи</span><br/><span class="tms-i">Циклонна система фільтрації</span><br/><span class="tms-i">Додатковий фільтр, що миється</span><br/><span class="tms-i">Настінне кріплення для економії місця при зберіганні</span><br/><span class="tms-i">Низький рівень шуму</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tms-section-7">
+      <div class="tms-wrap">
+        <div class="tms-header">
+          <div class="tms-h1">Технічні характеристики</div>
+        </div>
+        <div class="tms-content">
+          <div class="tms-item">
+            <div class="tms-p">Цифровий мотор потужністю</div>
+            <div class="tms-h2">350 Вт</div>
+          </div>
+          <div class="tms-item">
+            <div class="tms-p">Ємність акумулятора</div>
+            <div class="tms-h2">2500 мАг</div>
+          </div>
+          <div class="tms-item">
+            <div class="tms-p">Час роботи акумулятора</div>
+            <div class="tms-h2">30 хв</div>
+          </div>
+          <div class="tms-item">
+            <div class="tms-p">Рівень шуму</div>
+            <div class="tms-h2">88 дБ</div>
+          </div>
+          <div class="tms-item">
+            <div class="tms-p">Габарити: (довжина, ширина, висота)</div>
+            <div class="tms-h2">270 мм / 210 мм / 1120 мм</div>
+          </div>
+          <div class="tms-item">
+            <div class="tms-p">Вага</div>
+            <div class="tms-h2">2.24 кг</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
