@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ua"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Vestfalia XT</title>
+</head>
+<body>
+  <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+.tms-img-resp {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.tms-h1 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 50px;
+  color: #3D505A;
+}
+
+.tms-h2 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  color: #3D505A;
+  text-transform: uppercase;
+}
+.tms-h2 span {
+  color: #3D505A;
+  text-transform: none;
+}
+
+.tms-p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #3D505A;
+  padding-bottom: 12px;
+}
+.tms-p span {
+  color: #3D505A;
+}
+
+.tms-main-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tms-section {
+  margin-bottom: 100px;
+}
+
+.tms-i {
+  position: relative;
+  display: block;
+  text-align: left;
+  padding-left: 35px;
+}
+.tms-i:before {
+  content: " ";
+  left: 0;
+  top: 5px;
+  position: absolute;
+  height: 13px;
+  width: 15px;
+  background: url(img/tms-arrow.svg) 0 0 no-repeat;
+  display: inline-block;
+}
+
+.tms-right-shadow {
+  box-shadow: 10px 10px 20px 0px rgba(192, 190, 197, 0.45);
+  border-radius: 0px 20px 20px 0px;
+}
+
+.tms-left-shadow {
+  box-shadow: -10px 10px 20px 0px rgba(192, 190, 197, 0.45);
+  border-radius: 20px 0px 0px 20px;
+}
+
+.tms-youtube-button {
+  background-color: #EEF0F0;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+  text-decoration: none;
+  outline: none;
+  transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: 12px 25px 12px 50px;
+}
+.tms-youtube-button:before {
+  content: " ";
+  display: inline-block;
+  height: 16px;
+  width: 24px;
+  background: url(img/tms-youtube-icon.svg) no-repeat center center transparent;
+  background-size: 24px 16px;
+  margin: 3px 0px 0px -30px;
+  position: absolute;
+}
+.tms-youtube-button:focus, .tms-youtube-button:hover {
+  text-decoration: none;
+}
+.tms-youtube-button:focus:before, .tms-youtube-button:hover:before {
+  box-shadow: none;
+}
+.tms-youtube-button:hover {
+  background-color: #E1E2E1;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24);
+}
+.tms-youtube-button:active {
+  background-color: #c7c9c7;
+}
+
+.tms-youtube-card {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+}
+.tms-youtube-card:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(img/tms-youtube-icon.svg) center center no-repeat;
+}
+.tms-youtube-card:hover img {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#tms-section-1 {
+  background: url(img/tms-section-1-bg.jpg) left bottom no-repeat;
+  background-size: cover;
+}
+#tms-section-1 .tms-logo {
+  padding-top: 100px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+#tms-section-1 .tms-content {
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+#tms-section-1 .tms-content .tms-content-left .tms-h1 {
+  margin-bottom: 25px;
+}
+#tms-section-1 .tms-content .tms-content-left .tms-list {
+  padding-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 25px;
+}
+#tms-section-1 .tms-content .tms-content-left .tms-list .tms-item {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: flex-start;
+  align-items: center;
+  grid-gap: 12px;
+}
+#tms-section-1 .tms-content .tms-content-left .tms-list .tms-item .tms-p {
+  padding: 0;
+}
+
+#tms-section-2 .tms-h2, #tms-section-3 .tms-h2, #tms-section-5 .tms-h2, #tms-section-7 .tms-h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+#tms-section-2 .tms-content, #tms-section-3 .tms-content, #tms-section-5 .tms-content, #tms-section-7 .tms-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 100px;
+  align-items: center;
+}
+#tms-section-2 .tms-content .tms-item img, #tms-section-3 .tms-content .tms-item img, #tms-section-5 .tms-content .tms-item img, #tms-section-7 .tms-content .tms-item img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+#tms-section-2 .tms-content .tms-item a, #tms-section-3 .tms-content .tms-item a, #tms-section-5 .tms-content .tms-item a, #tms-section-7 .tms-content .tms-item a {
+  margin-top: 12px;
+}
+
+#tms-section-4, #tms-section-9 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+#tms-section-4 img, #tms-section-9 img {
+  margin-right: 50px;
+}
+#tms-section-4 .tms-content, #tms-section-9 .tms-content {
+  padding-left: 50px;
+}
+#tms-section-4 .tms-content .tms-list, #tms-section-9 .tms-content .tms-list {
+  margin-top: 25px;
+}
+#tms-section-4 .tms-content .tms-list .tms-p, #tms-section-9 .tms-content .tms-list .tms-p {
+  padding: 0 inherit;
+}
+
+#tms-section-6 .tms-h2, #tms-section-8 .tms-h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+#tms-section-6 .tms-content, #tms-section-8 .tms-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 100px;
+}
+#tms-section-6 .tms-content .tms-item, #tms-section-8 .tms-content .tms-item {
+  margin-bottom: 50px;
+}
+#tms-section-6 .tms-content .tms-item img, #tms-section-8 .tms-content .tms-item img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+#tms-section-6 .tms-content .tms-item .tms-p, #tms-section-8 .tms-content .tms-item .tms-p {
+  padding-bottom: 0;
+  margin: 0 5%;
+}
+
+#tms-section-10 .tms-h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+#tms-section-10 .tms-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 100px;
+  grid-row-gap: 25px;
+}
+#tms-section-10 .tms-content .tms-item {
+  background-color: #EEF0F0;
+  min-height: 50px;
+  display: grid;
+  align-items: center;
+  padding: 0 50px;
+}
+#tms-section-10 .tms-content .tms-item .tms-p {
+  padding: 0;
+}
+#tms-section-10 .tms-content .tms-item:nth-child(odd) {
+  border-radius: 0px 20px 20px 0px;
+}
+#tms-section-10 .tms-content .tms-item:nth-child(even) {
+  border-radius: 20px 0px 0px 20px;
+}
+
+@media only screen and (max-width: 992px) {
+  .tms-right-shadow {
+    box-shadow: none;
+    border-radius: 0px;
+  }
+
+  .tms-left-shadow {
+    box-shadow: none;
+    border-radius: 0px;
+  }
+
+  #tms-section-1 .tms-content {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+  #tms-section-1 .tms-content .tms-content-left .tms-h1 {
+    text-align: center;
+  }
+  #tms-section-1 .tms-content .tms-content-left .tms-list {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
+  }
+  #tms-section-1 .tms-content .tms-content-right {
+    text-align: center;
+  }
+
+  #tms-section-2 .tms-content, #tms-section-3 .tms-content, #tms-section-5 .tms-content {
+    grid-template-columns: 1fr;
+    margin-bottom: 50px;
+  }
+  #tms-section-2 .tms-content .tms-item, #tms-section-3 .tms-content .tms-item, #tms-section-5 .tms-content .tms-item {
+    padding: 0 3%;
+  }
+  #tms-section-2 .tms-content:nth-child(3) .tms-item:nth-child(1), #tms-section-3 .tms-content:nth-child(3) .tms-item:nth-child(1), #tms-section-5 .tms-content:nth-child(3) .tms-item:nth-child(1) {
+    order: 2;
+  }
+
+  #tms-section-4, #tms-section-9 {
+    grid-template-columns: 1fr;
+  }
+  #tms-section-4 img, #tms-section-9 img {
+    margin: 0 0 50px 0;
+    width: 100%;
+  }
+  #tms-section-4 .tms-content, #tms-section-9 .tms-content {
+    padding-left: 3%;
+  }
+  #tms-section-4 .tms-content .tms-h2, #tms-section-9 .tms-content .tms-h2 {
+    text-align: center;
+  }
+
+  #tms-section-6 .tms-content, #tms-section-8 .tms-content, #tms-section-7 .tms-content {
+    grid-template-columns: 1fr;
+  }
+  #tms-section-6 .tms-content .tms-item .tms-youtube-card, #tms-section-8 .tms-content .tms-item .tms-youtube-card, #tms-section-7 .tms-content .tms-item .tms-youtube-card {
+    width: 100%;
+  }
+  #tms-section-6 .tms-content .tms-item .tms-p, #tms-section-8 .tms-content .tms-item .tms-p, #tms-section-7 .tms-content .tms-item .tms-p {
+    margin: 0 3%;
+  }
+
+  #tms-section-10 .tms-content {
+    grid-column-gap: 25px;
+  }
+  #tms-section-10 .tms-content .tms-item {
+    padding: 0 25px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #tms-section-1 .tms-content {
+    padding: 0 3%;
+  }
+  #tms-section-1 .tms-content .tms-content-left .tms-list {
+    grid-template-columns: 1fr;
+    justify-content: flex-start;
+  }
+
+  #tms-section-10 .tms-content {
+    grid-template-columns: 1fr;
+    grid-column-gap: 25px;
+  }
+  #tms-section-10 .tms-content .tms-item {
+    padding: 0 25px;
+  }
+  #tms-section-10 .tms-content .tms-item:nth-child(odd) {
+    border-radius: 0px;
+  }
+  #tms-section-10 .tms-content .tms-item:nth-child(even) {
+    border-radius: 0px;
+  }
+}
+  </style>
+  <div class="tms-main-container">
+    <div class="tms-section" id="tms-section-1">
+      <div class="tms-logo"><img class="tms-img-resp" src="img/tms-logo-germany.svg" alt="Thomas"/></div>
+      <div class="tms-content">
+        <div class="tms-content-left">
+          <div class="tms-h1">Vestfalia XT</div>
+          <div class="tms-p">Безмішковий мийний пилосос для ідеальної чистоти і свіжості у вашому домі.<br/>Високоефективна система водяної фільтрації <strong>THOMAS AquaBOX.</strong><br/>Великий набір функцій, ефективна очистка килимів від шерсті й волосся.</div>
+          <div class="tms-list">
+            <div class="tms-item"><img class="tms-img-resp" src="img/tms-section-1-icon-1.svg" alt="AquaBOX"/>
+              <div class="tms-p">AquaBOX</div>
+            </div>
+            <div class="tms-item"><img class="tms-img-resp" src="img/tms-section-1-icon-2.svg" alt="Ефективне прибирання шерсті"/>
+              <div class="tms-p">Ефективне прибирання шерсті</div>
+            </div>
+          </div>
+          <div class="tms-list">
+            <div class="tms-item"><img class="tms-img-resp" src="img/tms-section-1-icon-3.svg" alt="Вологе прибирання"/>
+              <div class="tms-p">Вологе прибирання</div>
+            </div>
+            <div class="tms-item"><img class="tms-img-resp" src="img/tms-section-1-icon-4.svg" alt="Сухе прибирання"/>
+              <div class="tms-p">Сухе прибирання</div>
+            </div>
+            <div class="tms-item"><img class="tms-img-resp" src="img/tms-section-1-icon-5.svg" alt="Збирання води"/>
+              <div class="tms-p">Збирання води</div>
+            </div>
+          </div>
+        </div>
+        <div class="tms-content-right"><img class="tms-img-resp" src="img/tms-section-1-vc.png" alt="Thomas Vestfalia XT"/></div>
+      </div>
+    </div>
+    <div class="tms-section" id="tms-section-2">
+      <div class="tms-h2">Система фільтрації</div>
+      <div class="tms-content">
+        <div class="tms-item"><img class="tms-img-resp tms-right-shadow" src="img/tms-section-2-img-1.jpg" alt="THOMAS AquaBOX"/></div>
+        <div class="tms-item">
+          <div class="tms-p"><strong>Унікальний водяний фільтр THOMAS AquaBOX із технологією придушення пилу водяним туманом (WET-JET System)</strong></div>
+          <div class="tms-p">Після прибирання всередині пилососа залишається 99,99% пилу і 100% пилку. Приголомшливий результат!</div><a class="tms-p tms-youtube-button" href="https://thomas.support/r/1789" target="_blank">Як працює THOMAS AquaBOX</a>
+        </div>
+      </div>
+      <div class="tms-content">
+        <div class="tms-item">
+          <div class="tms-p"><strong>Фільтр тонкої очистки НЕРА</strong></div>
+          <div class="tms-p">Служить для утримання найдрібніших частинок пилу. Назад до приміщення виходить тільки свіже очищене повітря.</div>
+        </div>
+        <div class="tms-item"><img class="tms-img-resp tms-left-shadow" src="img/tms-section-2-img-2.jpg" alt="НЕРА"/></div>
+      </div>
+    </div>
+    <div class="tms-section" id="tms-section-3">
+      <div class="tms-h2">Альтернативні системи фільтрації</div>
+      <div class="tms-content">
+        <div class="tms-item"><img class="tms-img-resp tms-right-shadow" src="img/tms-section-3-img-1.jpg" alt="THOMAS DryBOX"/></div>
+        <div class="tms-item">
+          <div class="tms-p"><strong>Інноваційна система фракційного поділу пилу THOMAS DryBOX*</strong></div>
+          <div class="tms-p">Різні відсіки пилозбірника для крупного сміття та дрібного пилу. Постійно готовий до роботи і не потребує регулярного очищення. Швидке, гігієнічне й комфортне прибирання.</div>
+          <div class="tms-p">*в комплектацію не входить, можна придбати додатково</div><a class="tms-p tms-youtube-button" href="https://thomas.support/r/1790" target="_blank">Як працює THOMAS DryBOX</a>
+        </div>
+      </div>
+      <div class="tms-content">
+        <div class="tms-item">
+          <div class="tms-p"><strong>НЕРА-мішок XXL об’єму*</strong></div>
+          <div class="tms-p">Мішок об&#39;ємом 6 л із НЕРА-матеріалу. Зручний для оперативного прибирання, а також для збирання грубого або специфічного сміття.</div>
+          <div class="tms-p">*в комплектацію не входить, можна придбати додатково</div>
+        </div>
+        <div class="tms-item"><img class="tms-img-resp tms-left-shadow" src="img/tms-section-3-img-2.jpg" alt="НЕРА-мешок XXL"/></div>
+      </div>
+    </div>
+    <div class="tms-section" id="tms-section-4"><img class="tms-img-resp tms-right-shadow" src="img/tms-section-4-img.jpg" alt="ОСНОВНІ ПЕРеваги"/>
+      <div class="tms-content">
+        <div class="tms-h2">Основні переваги</div>
+        <div class="tms-list">
+          <div class="tms-p tms-i">Вироблено в Німеччині</div>
+          <div class="tms-p tms-i">Високоефективна система водяної фільтрації</div>
+          <div class="tms-p tms-i">Фільтр НЕРА, що миється</div>
+          <div class="tms-p tms-i">Вільне дихання для алергіків</div>
+          <div class="tms-p tms-i">Без мішків-пилозбірників</div>
+          <div class="tms-p tms-i">Просте і швидке очищення килимів від шерсті й волосся</div>
+          <div class="tms-p tms-i">Можливість установки альтернативної системи фільтрації</div>
+          <div class="tms-p tms-i">Стабільно висока потужність всмоктування</div>
+          <div class="tms-p tms-i">Простота експлуатації</div>
+          <div class="tms-p tms-i">Сухе прибирання</div>
+          <div class="tms-p tms-i">Вологе прибирання</div>
+          <div class="tms-p tms-i">Збирання рідин і мокрого сміття</div>
+        </div>
+      </div>
+    </div>
+    <div class="tms-section" id="tms-section-5">
+      <div class="tms-h2">Зручне прибирання і простий догляд</div>
+      <div class="tms-content">
+        <div class="tms-item">
+          <div class="tms-p">Підготовка до роботи й обслуговування після прибирання займають всього декілька хвилин. Для сухого прибирання потрібно залити в <strong>AquaBOX </strong>1 л звичайної води, а потім вилити її разом зі сміттям і брудом.</div>
+        </div>
+        <div class="tms-item"><img class="tms-img-resp tms-left-shadow" src="img/tms-section-5-img-1.jpg" alt="Для сухого прибирання потрібно залити 1 л звичайної води"/></div>
+      </div>
+      <div class="tms-content">
+        <div class="tms-item"><img class="tms-img-resp tms-right-shadow" src="img/tms-section-5-img-2.jpg" alt="У режимах вологого прибирання або збирання рідин вода заливаєтьсяя в окремий резервуар"/></div>
+        <div class="tms-item">
+          <div class="tms-p">У режимах вологого прибирання або збирання рідин вода заливається не в <strong>AquaBOX, </strong>а в окремий резервуар, який розташований на зовнішній стороні корпусу пилососа й легко знімається. При необхідності в воду для миття можна додати мийний засіб <strong>THOMAS ProTex </strong>(є в комплекті).</div>
+        </div>
+      </div>
+      <div class="tms-content">
+        <div class="tms-item">
+          <div class="tms-p">Зібрана вода або рідкий бруд потрапляють в порожню ємність <strong>AquaBOX </strong>і виливаються після закінчення прибирання.</div>
+        </div>
+        <div class="tms-item"><img class="tms-img-resp tms-left-shadow" src="img/tms-section-5-img-3.jpg" alt="Зібрана вода або рідкий бруд виливаються після закінчення прибирання"/></div>
+      </div>
+    </div>
+    <div class="tms-section" id="tms-section-6">
+      <div class="tms-h2">Сухе прибирання</div>
+      <div class="tms-content">
+        <div class="tms-item"><a class="tms-youtube-card" href="https://thomas.support/r/1787" target="_blank"><img class="tms-img-resp tms-right-shadow" src="img/tms-section-6-img-1.jpg" alt="Широка турбощітка для килимових покриттів"/></a>
+          <div class="tms-p"><strong>Широка турбощітка для килимових покриттів</strong></div>
+          <div class="tms-p">для глибокого чищення килимів, простого й швидкого прибирання волосся й шерсті домашніх тварин.</div>
+        </div>
+        <div class="tms-item"><a class="tms-youtube-card" href="https://thomas.support/r/1788" target="_blank"><img class="tms-img-resp tms-left-shadow" src="img/tms-section-6-img-2.jpg" alt="Насадка з перемикачем килим/підлога"/></a>
+          <div class="tms-p"><strong>Насадка з перемикачем килим/підлога</strong></div>
+          <div class="tms-p">для якісного прибирання килимових і гладких підлогових покриттів.</div>
+        </div>
+        <div class="tms-item"><a class="tms-youtube-card" href="https://thomas.support/r/1784" target="_blank"><img class="tms-img-resp tms-right-shadow" src="img/tms-section-6-img-3.jpg" alt="Щілинна насадка"/></a>
+          <div class="tms-p"><strong>Щілинна насадка</strong></div>
+          <div class="tms-p">для збирання пилу і сміття у важкодоступних місцях: щілинах між подушками меблів, зазорах, стиках і ін.</div>
+        </div>
+        <div class="tms-item"><a class="tms-youtube-card" href="https://thomas.support/r/1783" target="_blank"><img class="tms-img-resp tms-left-shadow" src="img/tms-section-6-img-4.jpg" alt="Насадка для м&amp;#39;яких меблів"/></a>
+          <div class="tms-p"><strong>Насадка для м&#39;яких меблів</strong></div>
+          <div class="tms-p">для швидкого й ретельного чищення крісел, диванів і т. п.</div>
+        </div>
+      </div>
+    </div>
+    <div class="tms-section" id="tms-section-8">
+      <div class="tms-h2">Вологе прибирання і збирання рідин</div>
+      <div class="tms-content">
+        <div class="tms-item"><a class="tms-youtube-card" href="https://thomas.support/r/1792" target="_blank"><img class="tms-img-resp tms-right-shadow" src="img/tms-section-7-img-1.jpg" alt="Широка насадка"/></a>
+          <div class="tms-p"><strong>Широка насадка</strong></div>
+          <div class="tms-p">для глибокого вологого чищення килимів, видалення плям, відновлення висоти ворсу.</div>
+        </div>
+        <div class="tms-item"><a class="tms-youtube-card" href="https://thomas.support/r/1793" target="_blank"><img class="tms-img-resp tms-left-shadow" src="img/tms-section-7-img-2.jpg" alt="Адаптер для твердих покриттів на широку насадку"/></a>
+          <div class="tms-p"><strong>Адаптер для твердих покриттів на широку насадку</strong></div>
+          <div class="tms-p">для якісного миття гладких підлогових покриттів (кахельної плитки і т. п.) без розводів і крапель.</div>
+        </div>
+        <div class="tms-item"><a class="tms-youtube-card" href="https://thomas.support/r/1785" target="_blank"><img class="tms-img-resp tms-right-shadow" src="img/tms-section-7-img-3.jpg" alt="Вузька насадка"/></a>
+          <div class="tms-p"><strong>Вузька насадка</strong></div>
+          <div class="tms-p">для ефективного «прання» оббивки диванів, крісел і т. п. Допомагає прибрати бруд і надати м&#39;яким меблям оновленого вигляду.</div>
+        </div>
+        <div class="tms-item"><a class="tms-youtube-card" href="https://thomas.support/r/1791" target="_blank"><img class="tms-img-resp tms-left-shadow" src="img/tms-section-7-img-4.jpg" alt="Комфортне збирання води й мокрого сміття"/></a>
+          <div class="tms-p"><strong>Комфортне збирання води й мокрого сміття</strong></div>
+          <div class="tms-p">«швидка допомога» в екстреній ситуації (наприклад, при прориві труби) дозволяє швидко зібрати великий об’єм води і уникнути наслідків потопу.</div>
+        </div>
+      </div>
+    </div>
+    <div class="tms-section" id="tms-section-9"><img class="tms-img-resp tms-right-shadow" src="img/tms-section-9-img.jpg" alt="Особливості конструкції"/>
+      <div class="tms-content">
+        <div class="tms-h2">Особливості конструкції</div>
+        <div class="tms-list">
+          <div class="tms-p tms-i">Ударостійкий пластик</div>
+          <div class="tms-p tms-i">Маневреність</div>
+          <div class="tms-p tms-i">Прогумовані кнопки управління</div>
+          <div class="tms-p tms-i">Автоматичне змотування кабелю</div>
+          <div class="tms-p tms-i">Телескопічна труба з нержавіючої сталі</div>
+          <div class="tms-p tms-i">Кордовий шланг із знімною системою подачі миючого розчину</div>
+          <div class="tms-p tms-i">Електронне плавне регулювання потужності на корпусі (TouchTronic)</div>
+          <div class="tms-p tms-i">Горизонтальне й вертикальне паркування</div>
+        </div>
+      </div>
+    </div>
+    <div class="tms-section" id="tms-section-10">
+      <div class="tms-h2">Технічні характеристики</div>
+      <div class="tms-content">
+        <div class="tms-item">
+          <div class="tms-p">Потужність двигуна – <strong>1700 Вт</strong></div>
+        </div>
+        <div class="tms-item">
+          <div class="tms-p">Об’єм води, що всмоктується – <strong>2,6 л</strong></div>
+        </div>
+        <div class="tms-item">
+          <div class="tms-p">Резервуар для мийного засобу – <strong>1,8 л</strong></div>
+        </div>
+        <div class="tms-item">
+          <div class="tms-p">Радіус прибирання – <strong>12 м</strong></div>
+        </div>
+        <div class="tms-item">
+          <div class="tms-p">Продуктивність насоса мийного засобу – <strong>0,35 л/хв</strong></div>
+        </div>
+        <div class="tms-item">
+          <div class="tms-p">Габарити: довжина – <strong>486 мм, </strong>ширина – <strong>318 мм, </strong>висота – <strong>306 мм</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
