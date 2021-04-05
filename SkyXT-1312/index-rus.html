@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Sky XT</title>
+</head>
+<body>
+  <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+.tms-img-resp {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.tms-h1 {
+  font-family: PT Sans, sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #455B66;
+  line-height: 48px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.tms-h2 {
+  font-family: PT Sans, sans-serif;
+  font-size: 33px;
+  font-weight: 400;
+  color: #455B66;
+  line-height: 40px;
+  margin-bottom: 16px;
+}
+
+.tms-h3 {
+  font-family: PT Sans, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #455B66;
+  line-height: 28px;
+  margin-bottom: 32px;
+}
+
+.tms-p {
+  font-family: PT Sans, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #455B66;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.tms-main-container {
+  max-width: 1312px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tms-col-1 {
+  margin-bottom: 128px;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 64px;
+}
+
+.tms-col-2 {
+  margin-bottom: 128px;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+}
+
+.tms-col-3 {
+  margin-bottom: 128px;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+  align-items: center;
+}
+
+.tms-col-center {
+  margin-bottom: 128px;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
+  align-items: center;
+}
+.tms-col-center .tms-item {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.tms-i {
+  position: relative;
+  display: block;
+  text-align: left;
+  padding-left: 16px;
+}
+.tms-i:before {
+  content: " ";
+  left: 0;
+  top: 9px;
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background-color: #455B66;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.tms-youtube-button {
+  background-color: #F5F5F6;
+  display: inline-block;
+  height: 56px;
+  position: relative;
+  border-radius: 50px;
+  text-decoration: none;
+  outline: none;
+  transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  text-align: left;
+  padding: 20px 20px 20px 70px;
+  line-height: 18px;
+}
+.tms-youtube-button:before {
+  content: " ";
+  display: inline-block;
+  height: 56px;
+  width: 56px;
+  background: url(img/tms-youtube-icon.svg) no-repeat center center transparent;
+  background-size: 24px 16px;
+  background-color: #E1E2E1;
+  border-radius: 50px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24);
+  margin: -20px 0 0 -70px;
+  position: absolute;
+}
+.tms-youtube-button:focus, .tms-youtube-button:hover {
+  text-decoration: none;
+}
+.tms-youtube-button:focus:before, .tms-youtube-button:hover:before {
+  box-shadow: none;
+}
+.tms-youtube-button:hover {
+  background-color: #E1E2E1;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24);
+}
+.tms-youtube-button:active {
+  background-color: #c7c9c7;
+}
+
+.tms-card {
+  padding: 32px;
+  background: #F5F5F6;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.tms-youtube-card {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.tms-youtube-card img {
+  transition: box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24);
+  border-radius: 20px;
+}
+.tms-youtube-card:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(img/tms-youtube-icon.svg) center center no-repeat;
+}
+.tms-youtube-card:hover img {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.tms-NOyoutube-card {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 32px;
+}
+.tms-NOyoutube-card img {
+  transition: box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24);
+  border-radius: 20px;
+}
+
+#tms-section-1 {
+  padding-top: 64px;
+  background: url(img/tms-section-1-bg.jpg) center center no-repeat;
+}
+#tms-section-1 img {
+  margin: 32px auto 0;
+}
+#tms-section-1 .tms-text {
+  text-align: center;
+}
+
+#tms-section-2 .tms-h3, #tms-section-10 .tms-h3 {
+  margin: 0;
+}
+
+#tms-section-4 .tms-header {
+  text-align: center;
+}
+#tms-section-4 .tms-header .tms-p {
+  margin-bottom: 32px;
+}
+#tms-section-4 .tms-content .tms-item {
+  display: grid;
+  align-content: flex-start;
+}
+
+@media only screen and (max-width: 768px) {
+  .tms-col-1, .tms-col-2, .tms-col-3, .tms-col-center {
+    margin-bottom: 64px;
+    padding: 0 3%;
+  }
+
+  .tms-col-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .tms-col-3 {
+    grid-template-columns: 1fr;
+  }
+  .tms-col-3 .tms-item:nth-child(2) {
+    order: 1;
+  }
+
+  .tms-col-center {
+    grid-template-columns: 1fr;
+  }
+  .tms-col-center .tms-item {
+    grid-column-start: 0;
+    grid-column-end: 1;
+  }
+
+  .tms-col-2 .tms-item img, .tms-col-3 .tms-item img {
+    width: 100%;
+  }
+}
+  </style>
+  <div class="tms-main-container">
+    <div class="tms-col-1" id="tms-section-1"><img src="img/tms-logo-germany.svg" alt="Thomas"/><img class="tms-img-resp" src="img/tms-section-1-vc.png" alt="Thomas Sky XT"/>
+      <div class="tms-text">
+        <div class="tms-h1">Sky XT</div>
+        <div class="tms-h2">Качественная сухая и влажная уборка для идеальной чистоты дома и свежести воздуха</div>
+        <div class="tms-p">Моющий пылесос с уникальной системой фильтрации <strong>AquaBOX </strong>для эффективной уборки и очищения воздуха в помещении</div>
+      </div>
+    </div>
+    <div class="tms-col-2" id="tms-section-2">
+      <div class="tms-card tms-h3">Водяной фильтр - создание здорового микроклимата <br/>в доме</div>
+      <div class="tms-card tms-h3">Специальная насадка для уборки шерсти и волос – быстрая очистка различных напольных покрытий</div>
+      <div class="tms-card tms-h3">Моющий режим – тщательная влажная чистка ковров, качественное мытье гладкого пола</div>
+      <div class="tms-card tms-h3">Полный цикл производства в <strong>Германии </strong>и надежные материалы – гарантия высокого качества</div>
+    </div>
+    <div id="tms-section-3">
+      <div class="tms-header">
+        <div class="tms-h1">Основная система фильтрации</div>
+        <div class="tms-content tms-col-2">
+          <div class="tms-item tms-NOyoutube-card"><img class="tms-img-resp" src="img/tms-section-3-img.jpg" alt="AquaBox"/></div>
+          <div class="tms-text">
+            <div class="tms-h2">Водяной фильтр</div>
+            <div class="tms-p">Технология подавления пыли <strong>Wet-Jet </strong>в системе водяной фильтрации <strong>AquaBOX </strong>– это абсолютная свобода от пыли и приятная свежесть воздуха в вашем доме. </div>
+            <div class="tms-p">Пыль подавляется сразу на входе в пылесос, когда пылевоздушный поток проходит сквозь мощную стену воды. Обратно в помещение попадает только очищенный воздух. В пылесосе дополнительно установлен моющийся фильтр <strong>НЕРА.</strong></div>
+            <div class="tms-p"><strong>THOMAS Sky XT </strong>– идеальный помощник в борьбе с аллергией. </div>
+            <div class="tms-p">Пылесос сертифицирован Британской ассоциацией дерматологов и аллергологов на класс приборов для аллергиков.</div><a class="tms-p tms-youtube-button" href="https://thomas.support/r/1844" target="_blank">Как работает AquaBox</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tms-section-4">
+      <div class="tms-header">
+        <div class="tms-h1">Альтернативные системы фильтрации</div>
+      </div>
+      <div class="tms-content tms-col-2">
+        <div class="tms-item">
+          <div class="tms-NOyoutube-card"><img class="tms-img-resp" src="img/tms-section-4-img-1.jpg" alt="НЕРА-мешок"/></div>
+          <div class="tms-text">
+            <div class="tms-h3"><strong>НЕРА-мешок</strong></div>
+            <div class="tms-p">Для оперативной уборки, а также для сбора грубого мусора, который может повредить или засорить систему водяного фильтра.</div>
+            <div class="tms-p">Входит в комплектацию пылесоса.</div>
+          </div>
+        </div>
+        <div class="tms-item">
+          <div class="tms-NOyoutube-card"><img class="tms-img-resp" src="img/tms-section-4-img-2.jpg" alt="THOMAS DryBOX"/></div>
+          <div class="tms-text">
+            <div class="tms-h3"><strong>THOMAS DryBOX</strong></div>
+            <div class="tms-p">Инновационный пылесборник <strong>DryBOX </strong>с технологией фракционного разделения пыли для быстрой, простой и гигиеничной уборки.</div>
+            <div class="tms-p">Не входит в комплектацию пылесоса.</div><a class="tms-p tms-youtube-button" href="https://thomas.support/r/1845" target="_blank">Как работает DryBox</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tms-section-5">
+      <div class="tms-header">
+        <div class="tms-h1">Максимальная простота эксплуатации и ухода</div>
+      </div>
+      <div class="tms-content tms-col-2">
+        <div class="tms-item">
+          <div class="tms-NOyoutube-card"><img class="tms-img-resp" src="img/tms-section-5-img-1.jpg" alt="залить в аквабокс 1 л обычной воды"/></div>
+          <div class="tms-text">
+            <div class="tms-p">Для того, чтобы приступить к работе в режиме сухой уборки с очисткой воздуха, нужно залить в аквабокс 1 л обычной воды, а по окончании уборки вылить грязную воду.</div>
+          </div>
+        </div>
+        <div class="tms-item">
+          <div class="tms-NOyoutube-card"><img class="tms-img-resp" src="img/tms-section-5-img-2.jpg" alt="Для использования режима влажной уборки достаточно: залить воду в наружный резервуар"/></div>
+          <div class="tms-text">
+            <div class="tms-p">Для использования режима влажной уборки достаточно залить воду в наружный резервуар, при необходимости добавить фирменное моющее средство <strong>THOMAS ProTex </strong>для текстильных поверхностей, по окончании  работы вылить грязную воду из внутреннего контейнера.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tms-section-6">
+      <div class="tms-header">
+        <div class="tms-h1">Сухая уборка</div>
+      </div>
+      <div class="tms-content tms-col-2">
+        <div class="tms-item"><a href="https://thomas.support/r/1846" target="_blank">
+            <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-6-img-1.jpg" alt="Качественная очистка ковровых и гладких напольных покрытий, быстрый сбор шерсти и волос при помощи специальной переключаемой насадки ковер/пол."/></div></a>
+          <div class="tms-p">Качественная очистка ковровых и гладких напольных покрытий, быстрый сбор шерсти и волос при помощи специальной переключаемой насадки ковер/пол.</div>
+        </div>
+        <div class="tms-item"><a href="https://thomas.support/r/1847" target="_blank">
+            <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-6-img-2.jpg" alt="Уборка пыли и мусора в труднодоступных местах (например, между подушками мягкой мебели) щелевой насадкой."/></div></a>
+          <div class="tms-p">Уборка пыли и мусора в труднодоступных местах (например, между подушками мягкой мебели) щелевой насадкой.</div>
+        </div>
+      </div>
+    </div>
+    <div id="tms-section-7">
+      <div class="tms-header">
+        <div class="tms-h1">Влажная уборка</div>
+      </div>
+      <div class="tms-content tms-col-2">
+        <div class="tms-item"><a href="https://thomas.support/r/1851" target="_blank">
+            <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-7-img-1.jpg" alt="Влажная чистка ковров широкой моющей насадкой."/></div></a>
+          <div class="tms-p">Влажная чистка ковров широкой моющей насадкой. Во время мытья ковры промываются на всю глубину ворса, улучшается вид текстильных покрытий, без следа исчезают пятна и быстро удаляются случайные загрязнения.</div>
+        </div>
+        <div class="tms-item"><a href="https://thomas.support/r/1852" target="_blank">
+            <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-7-img-2.jpg" alt="Качественное и комфортное мытье гладких напольных покрытий."/></div></a>
+          <div class="tms-p">Качественное и комфортное мытье гладких напольных покрытий (кафеля, линолеума и т.п.) с помощью широкой моющей насадки с адаптером-щеткой. Насадка хорошо очищает пол, не оставляет разводов и просушивает поверхность.</div>
+        </div>
+      </div>
+    </div>
+    <div id="tms-section-8">
+      <div class="tms-header">
+        <div class="tms-h1">Cбор жидкостей</div>
+      </div>
+      <div class="tms-content tms-col-center">
+        <div class="tms-item"><a href="https://thomas.support/r/1854" target="_blank">
+            <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-8-img-1.jpg" alt="Быстрый сбор мокрой грязи, а также больших объемов жидкости."/></div></a>
+          <div class="tms-p">Быстрый сбор мокрой грязи, а также больших объемов жидкости. В экстренной ситуации эта функция поможет ликвидировать последствия аварии (например, потопа) и свести к минимуму ущерб.</div>
+        </div>
+      </div>
+    </div>
+    <div id="tms-section-9">
+      <div class="tms-header">
+        <div class="tms-h1">Преимущества</div>
+      </div>
+      <div class="tms-content tms-col-3">
+        <div class="tms-item">
+          <div class="tms-p"><span class="tms-i"> <strong>Made in Germany</strong></span><br/><span class="tms-i">Водяной фильтр <strong>AquaBox</strong></span><br/><span class="tms-i">Альтернативная система фильтрации - <strong>НЕРА</strong>-мешок</span><br/><span class="tms-i">Возможность установки инновационного пылесборника <strong>DryBOX </strong>(в комплект не входит)</span><br/><span class="tms-i">Моющийся фильтр <strong>НЕРА</strong></span><br/><span class="tms-i">Эффективная очистка ковров от шерсти животных</span><br/><span class="tms-i">Влажная уборка пола</span><br/><span class="tms-i">Сбор сухого и мокрого мусора</span></div>
+        </div>
+        <div class="tms-item"><img class="tms-img-resp" src="img/tms-section-9-img.png" alt="Thomas Sky XT"/></div>
+        <div class="tms-item">
+          <div class="tms-p"><span class="tms-i">Наружный съемный резервуар для влажной уборки</span><br/><span class="tms-i">Компактность и маневренность</span><br/><span class="tms-i">2 положения парковки (горизонтальное и вертикальное)</span><br/><span class="tms-i">Четырехступенчатая электронная регулировка мощности <strong>TouchTronic</strong></span><br/><span class="tms-i">Противоударный корпус</span><br/><span class="tms-i">Большой радиус действия</span><br/><span class="tms-i">Автоматическая смотка кабеля</span></div>
+        </div>
+      </div>
+    </div>
+    <div id="tms-section-10">
+      <div class="tms-header">
+        <div class="tms-h1">Технические характеристики</div>
+      </div>
+      <div class="tms-content tms-col-2">
+        <div class="tms-card tms-h3">Мощность двигателя<br/><strong>1600 Вт</strong></div>
+        <div class="tms-card tms-h3">Объём всасываемой жидкости<br/><strong>2,6 л</strong></div>
+        <div class="tms-card tms-h3">Радиус уборки<br/><strong>10 м</strong></div>
+        <div class="tms-card tms-h3">Производительность насоса моющего средства<br/><strong>0,35 л/мин</strong></div>
+        <div class="tms-card tms-h3">Вес прибора<br/><strong>8,25 кг</strong></div>
+        <div class="tms-card tms-h3">Габариты:<br/>длина – <strong>486 мм, </strong>ширина – <strong>318 мм, </strong>высота – <strong>306 мм</strong></div>
+      </div>
+    </div>
+  </div>
+</body>
