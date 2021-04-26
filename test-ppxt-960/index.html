@@ -127,6 +127,14 @@
   display: inline-block;
 }
 
+#tms-1 {
+  padding-top: 250px;
+  background-image: url(img/tms-section-1-bgL.png), url(img/tms-section-1-bgR.png), url(img/tms-section-1-bg.png);
+  background-position: right 530px bottom 400px, left 530px bottom 400px, center bottom;
+  background-size: 50%, 50%, 1200px;
+  background-repeat: no-repeat;
+}
+
 @media only screen and (max-width: 600px) {
   .tms-2-col {
     display: grid;
@@ -153,7 +161,7 @@
   </style>
   <div class="tms-main-container">
     <div class="tms-wrap">
-      <div class="tms-section">
+      <div class="tms-section" id="tms-1">
         <div class="tms-item tms-center"><img class="tms-img-resp" src="img/tms-section-1-img.png" alt="Thomas Parkett Prestige XT"/></div>
         <div class="tms-item tms-center">
           <div class="tms-h1 tms-header">Parkett Prestige XT</div>
