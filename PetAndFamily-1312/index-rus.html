@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+
 <html lang="ru"></html>
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>Thomas Pet&amp;Family</title>
+  <title>Thomas AQUA+ Pet&amp;Family</title>
 </head>
 <body>
   <style>* {
@@ -16,459 +16,380 @@
   box-sizing: border-box;
 }
 
+.tms-h1 {
+  font-family: Open Sans, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #455B66;
+  line-height: 130%;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+
+.tms-h2 {
+  font-family: Open Sans, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #455B66;
+  line-height: 130%;
+}
+
+.tms-h3 {
+  font-family: Open Sans, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #455B66;
+  line-height: 130%;
+}
+
+.tms-p {
+  font-family: Open Sans, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #455B66;
+  line-height: 130%;
+  margin-bottom: 15px;
+}
+
+.tms-main-container {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tms-wrap {
+  padding: 0 24px;
+}
+
+.tms-section {
+  margin-bottom: 100px;
+}
+
+.tms-img-100 {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
 .tms-img-resp {
   display: inline-block;
   max-width: 100%;
   height: auto;
 }
 
-.tms-h1 {
-  font-family: PT Sans, sans-serif;
-  font-size: 42px;
-  font-weight: 400;
-  color: #FE5E00;
-  line-height: 48px;
+.tms-1-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 24px;
 }
 
-.tms-h2 {
-  font-family: PT Sans, sans-serif;
-  font-size: 33px;
-  font-weight: 400;
-  color: #455B66;
-  line-height: 40px;
+.tms-2-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+  align-items: center;
 }
 
-.tms-h3 {
-  font-family: PT Sans, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  color: #455B66;
-  line-height: 32px;
+.tms-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
 }
 
-.tms-p {
-  font-family: PT Sans, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #455B66;
-  line-height: 24px;
+.tms-header {
+  margin-bottom: 15px;
 }
 
-.tms-main-container {
-  max-width: 1312px;
-  margin: 0 auto;
-  position: relative;
+.tms-center {
+  text-align: center;
 }
 
-.tms-wrap {
-  padding: 64px 40px;
+.tms-reverse {
+  direction: rtl;
+}
+.tms-reverse .tms-item {
+  direction: ltr;
+}
+
+.tms-card {
+  background-color: #F5F6F8;
+}
+
+.tms-card-text {
+  padding: 3%;
+}
+
+.tms-fullImg {
+  min-height: 640px;
+  background: url(img/tms-2-1.jpg) center 0 no-repeat;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: flex-end;
+  justify-content: center;
+}
+.tms-fullImg .tms-h2 {
+  text-align: center;
+  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0.25rem 0 0 0.25rem;
+  direction: ltr;
 }
 
 .tms-i {
   position: relative;
   display: block;
   text-align: left;
-  padding-left: 16px;
+  padding-left: 15px;
 }
 .tms-i:before {
   content: " ";
   left: 0;
-  top: 9px;
+  top: 7px;
   position: absolute;
-  height: 8px;
-  width: 8px;
-  background-color: #FE5E00;
-  border-radius: 2px;
+  height: 7px;
+  width: 7px;
+  background-color: #e22b2b;
+  border-radius: 50%;
   display: inline-block;
 }
 
-.tms-youtube-button {
-  background-color: #F5F5F6;
-  display: inline-block;
-  height: 56px;
+.tms-i-icon {
   position: relative;
-  border-radius: 50px;
-  text-decoration: none;
-  outline: none;
-  transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  display: block;
   text-align: left;
-  padding: 20px 20px 20px 70px;
-  line-height: 18px;
+  padding-left: 28px;
 }
-.tms-youtube-button:before {
+.tms-i-icon:before {
   content: " ";
-  display: inline-block;
-  height: 56px;
-  width: 56px;
-  background: url(img/tms-youtube-icon.svg) no-repeat center center transparent;
-  background-size: 24px 16px;
-  background-color: #E1E2E1;
-  border-radius: 50px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24);
-  margin: -20px 0 0 -70px;
-  position: absolute;
-}
-.tms-youtube-button:focus, .tms-youtube-button:hover {
-  text-decoration: none;
-}
-.tms-youtube-button:focus:before, .tms-youtube-button:hover:before {
-  box-shadow: none;
-}
-.tms-youtube-button:hover {
-  background-color: #E1E2E1;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24);
-}
-.tms-youtube-button:active {
-  background-color: #c7c9c7;
-}
-
-.tms-card {
-  padding: 32px;
-  background: #F5F5F6;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  text-align: center;
-}
-
-.tms-youtube-card {
-  display: inline-block;
-  position: relative;
-  font-size: 0;
-}
-.tms-youtube-card img {
-  transition: box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24);
-  border-radius: 20px;
-}
-.tms-youtube-card:before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  background: url(img/tms-youtube-icon.svg) center center no-repeat;
-}
-.tms-youtube-card:hover img {
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-}
-
-.tms-NOyoutube-card {
+  top: -3px;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  background-image: url(img/tms-i-icon.svg);
   display: inline-block;
-  position: relative;
-  font-size: 0;
-}
-.tms-NOyoutube-card img {
-  transition: box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24);
-  border-radius: 20px;
-}
-
-.tms-section-1 {
-  background: url(img/tms-section-1-bg.jpg) right center no-repeat;
-  background-size: cover;
-}
-.tms-section-1 .tms-logo {
-  text-align: center;
-}
-.tms-section-1 .tms-content, .tms-section-1 .tms-header {
-  text-align: center;
-  padding-top: 64px;
-}
-.tms-section-1 .tms-content .tms-h1, .tms-section-1 .tms-header .tms-h1 {
-  padding-bottom: 16px;
-}
-
-.tms-section-2 .tms-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: stretch;
-  justify-items: stretch;
-  align-content: stretch;
-  grid-column-gap: 16px;
-  grid-row-gap: 32px;
-}
-
-.tms-section-3 .tms-header {
-  text-align: center;
-}
-.tms-section-3 .tms-header .tms-h1 {
-  padding-bottom: 16px;
-}
-.tms-section-3 .tms-content {
-  margin-top: 32px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: start;
-  justify-items: center;
-  grid-gap: 32px;
-}
-.tms-section-3 .tms-content .tms-item .tms-image {
-  text-align: center;
-}
-.tms-section-3 .tms-content .tms-item .tms-text {
-  width: 95%;
-  padding: 32px 0;
-}
-.tms-section-3 .tms-content .tms-item .tms-text .tms-h2 {
-  margin-bottom: 32px;
-}
-
-.tms-section-4 .tms-header {
-  text-align: center;
-}
-.tms-section-4 .tms-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 32px;
-  align-items: start;
-  justify-items: center;
-}
-.tms-section-4 .tms-content .tms-item {
-  padding-top: 32px;
-  text-align: center;
-}
-.tms-section-4 .tms-content .tms-item .tms-text {
-  padding-top: 16px;
-  text-align: left;
-}
-
-.tms-section-5 .tms-header, .tms-section-6 .tms-header {
-  text-align: center;
-}
-.tms-section-5 .tms-content, .tms-section-6 .tms-content {
-  margin-top: 32px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 16px;
-  grid-row-gap: 32px;
-}
-.tms-section-5 .tms-content .tms-item, .tms-section-6 .tms-content .tms-item {
-  text-decoration: none;
-  text-align: center;
-}
-.tms-section-5 .tms-content .tms-item .tms-p, .tms-section-6 .tms-content .tms-item .tms-p {
-  padding: 16px 32px 0;
-}
-
-.tms-section-7 .tms-header {
-  text-align: center;
-}
-.tms-section-7 .tms-content {
-  padding-top: 32px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 32px;
-  justify-items: center;
-  align-items: center;
-  align-content: stretch;
-}
-.tms-section-7 .tms-content .tms-item:nth-child(2) {
-  align-self: center;
-}
-
-.tms-section-8 .tms-header {
-  text-align: center;
-}
-.tms-section-8 .tms-content {
-  margin-top: 32px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: stretch;
-  justify-items: stretch;
-  align-content: stretch;
-  grid-column-gap: 16px;
-  grid-row-gap: 32px;
 }
 
 @media only screen and (max-width: 768px) {
-  .tms-section-2 .tms-content, .tms-section-3 .tms-content, .tms-section-4 .tms-content, .tms-section-8 .tms-content {
+  .tms-fullImg {
+    background-position: left -100px center;
     grid-template-columns: 1fr;
+    align-items: flex-end;
+  }
+  .tms-fullImg .tms-h2 {
+    text-align: center;
   }
 
-  .tms-section-5 .tms-content, .tms-section-6 .tms-content {
+  .tms-2-col {
+    display: grid;
     grid-template-columns: 1fr;
+    grid-gap: 3%;
+    text-align: center;
   }
 
-  .tms-section-7 .tms-content {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 0;
-    justify-items: start;
-    align-items: start;
-  }
-  .tms-section-7 .tms-item:nth-child(2) {
-    grid-row: 1/2;
-    justify-self: center;
-  }
-  .tms-section-7 .tms-item:nth-child(2) img {
-    max-height: 360px;
-  }
-  .tms-section-7 .tms-item:nth-child(1) {
-    grid-row: 2/3;
-    align-self: end;
-    padding-bottom: 24px;
-  }
-  .tms-section-7 .tms-item:nth-child(3) {
-    grid-row: 3/4;
+  .tms-3-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width: 480px) {
-  .tms-section-4 .tms-content {
+@media only screen and (max-width: 576px) {
+  .tms-wrap {
+    padding: 0 12px;
+  }
+
+  .tms-section {
+    margin-bottom: 80px;
+  }
+
+  .tms-3-col {
+    display: grid;
     grid-template-columns: 1fr;
   }
 }
   </style>
   <div class="tms-main-container">
-    <div class="tms-section-1">
-      <div class="tms-wrap">
-        <div class="tms-logo"><img src="img/tms-logo-germany.svg" alt="Thomas"/></div>
-        <div class="tms-content"><img class="tms-img-resp" src="img/tms-section-1-vc.png" alt="Thomas Pet&amp;amp;Family"/></div>
-        <div class="tms-header">
-          <div class="tms-h1">Pet&amp;Family</div>
-          <div class="tms-p">Моющий пылесос с уникальной системой фильтрации <strong>AquaBOX </strong>для эффективной и комфортной уборки.
-            <div class="tms-p"></div>Лучший помощник для уборки дома, в котором есть дети и животные.
-          </div>
-        </div>
+    <div class="tms-section">
+      <div class="tms-item tms-center">
+        <div class="tms-h1 tms-header">AQUA+ Pet&amp;Family</div>
+        <div class="tms-h3">Моющий пылесос премиум-класса с водяной фильтрацией AquaBOX</div>
       </div>
     </div>
-    <div class="tms-section-2">
-      <div class="tms-wrap">
-        <div class="tms-content">
-          <div class="tms-card tms-h3">Уникальный водяной фильтр — создание здорового микроклимата в доме.</div>
-          <div class="tms-card tms-h3">Большая комплектация — быстрый сбор шерсти, сухая и влажная уборка различных поверхностей.</div>
-          <div class="tms-card tms-h3"><strong>HEPA-мешок XXL </strong>объёма в комплекте — быстрая уборка без подготовки и обслуживания.</div>
-          <div class="tms-card tms-h3">Полный цикл производства в <strong>Германии</strong> и надёжные материалы — гарантия высокого качества.</div>
-        </div>
+    <div class="tms-section">
+      <div class="tms-item tms-fullImg tms-reverse">
+        <div class="tms-h2">Легкая уборка - чистая радость от домашних питомцев!</div>
       </div>
     </div>
-    <div class="tms-section-3">
-      <div class="tms-wrap">
-        <div class="tms-header">
-          <div class="tms-h1">Системы фильтрации</div>
+    <div class="tms-wrap"> 
+      <div class="tms-section">
+        <div class="tms-header tms-center">
+          <div class="tms-h2">С пылесосом THOMAS AQUA+ Pet&amp;Family вы всегда найдёте правильное решение:</div>
         </div>
-        <div class="tms-content">
+        <div class="tms-2-col tms-reverse">
           <div class="tms-item">
-            <div class="tms-image"><img class="tms-img-resp" src="img/tms-section-3-img-1.png" alt="AquaBox"/></div>
-            <div class="tms-text">
-              <div class="tms-h3"><strong>Водяной фильтр</strong><br/><br/></div>
-              <div class="tms-p">Технология подавления пыли <strong>Wet-Jet </strong>в системе водяной фильтрации <strong>AquaBOX </strong>– это абсолютная свобода от пыли и приятная свежесть воздуха в вашем доме.<br/><br/>Пыль подавляется сразу на входе в пылесос, когда пылевоздушный поток проходит сквозь мощную стену воды. Обратно в помещение попадает только очищенный воздух. В пылесосе дополнительно установлен моющийся фильтр <strong>НЕРА.</strong><br/><br/><strong>Pet&amp;Family </strong>— идеальный помощник в борьбе с аллергией. Пылесос сертифицирован как прибор для аллергиков.</div>
-            </div><a class="tms-p tms-youtube-button" href="https://thomas.support/r/1707" target="_blank">Видео демонстрация</a>
+            <div class="tms-p tms-i-icon">Как освежить воздух в доме?</div>
+            <div class="tms-p tms-i-icon">Как просто и быстро убрать сухой мусор?</div>
+            <div class="tms-p tms-i-icon">Как убрать шерсть и волосы с напольных покрытий и мягкой мебели?</div>
+            <div class="tms-p tms-i-icon">Как помыть ковры в домашних условиях?</div>
+            <div class="tms-p tms-i-icon">Как очистить мягкую мебель от пятен и залоснений?</div>
+            <div class="tms-p tms-i-icon">Как оперативно собрать пролитую жидкость в квартире?</div>
+            <div class="tms-p tms-i-icon">Как убирать легко и с удовольствием?</div>
           </div>
-          <div class="tms-item">
-            <div class="tms-image"><img class="tms-img-resp" src="img/tms-section-3-img-2.png" alt="HEPA Bag"/></div>
-            <div class="tms-text">
-              <div class="tms-h3"><strong>НЕРА-мешок XXL объёма</strong><br/><br/></div>
-              <div class="tms-p">для оперативной уборки, а также для сбора грубого мусора, который может повредить систему водяного фильтра.<br/><br/></div>
-            </div><a class="tms-p tms-youtube-button" href="https://thomas.support/r/1708" target="_blank">Видео демонстрация</a>
-          </div>
+          <div class="tms-item"><img class="tms-img-100" src="img/tms-3-1.png" alt="AQUA+ Pet&amp;amp;Family"/></div>
         </div>
       </div>
-    </div>
-    <div class="tms-section-4">
-      <div class="tms-wrap">
-        <div class="tms-header">
-          <div class="tms-h1">Максимальная простота эксплуатации и ухода</div>
+      <div class="tms-section tms-2-col">
+        <div class="tms-item">
+          <div class="tms-header">
+            <div class="tms-h2">Основная система фильтрации</div>
+          </div>
+          <div class="tms-p">Уникальный водяной фильтр <strong>AquaBOX </strong>c инновационной технологией подавления пыли <strong>Wet-Jet </strong>удерживает 99,99% мельчайшей пыли и 100% пыльцы.</div>
+          <div class="tms-p">Воздух после уборки ощущается чистым и свежим!</div>
+          <div class="tms-p">Дополнительно установлен фильтр <strong>HEPA 13, </strong>который можно мыть.</div>
         </div>
-        <div class="tms-content">
-          <div class="tms-item"><img class="tms-img-resp" src="img/tms-section-4-img-1.png" alt="залить в аквабокс 1 л обычной воды"/>
-            <div class="tms-text">
-              <div class="tms-p">Для того чтобы приступить к работе в режиме сухой уборки с очисткой воздуха, достаточно залить в аквабокс 1 л обычной воды, а по окончании уборки вылить грязную воду.</div>
+        <div class="tms-item">
+          <video class="tms-lazy-video tms-img-100" poster="img/tms-v-1.jpg" autoplay="true" loop="true" muted="muted">
+            <source data-src="https://thomas.support/dl/media/2021/4/b15079.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </div>
+      <div class="tms-section tms-2-col tms-reverse">
+        <div class="tms-item">
+          <div class="tms-header">
+            <div class="tms-h2">Альтернативные системы фильтрации</div>
+          </div>
+          <div class="tms-p"><strong>В комплекте есть</strong></div>
+          <div class="tms-p tms-i"><strong>НЕРА-мешок XXL </strong>объёма для оперативной уборки и сбора грубого мусора.</div>
+          <div class="tms-p"><strong>При желании вы можете приобрести и установить</strong></div>
+          <div class="tms-p tms-i">Циклонный фильтр для сухой уборки <strong>DryBОХ </strong>с фракционным разделением мусора и пыли.</div>
+        </div>
+        <div class="tms-item">
+          <video class="tms-lazy-video tms-img-100" poster="img/tms-v-2.jpg" autoplay="true" loop="true" muted="muted">
+            <source data-src="https://thomas.support/dl/media/2021/6/b15533.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </div>
+      <div class="tms-section tms-2-col">
+        <div class="tms-item">
+          <div class="tms-header">
+            <div class="tms-h2">Сухая уборка</div>
+          </div>
+          <div class="tms-p tms-i">Глубокая чистка ковровых покрытий от мусора и пыли.</div>
+          <div class="tms-p tms-i">Тщательная очистка ковров от шерсти домашних животных, ниток и волос.</div>
+          <div class="tms-p tms-i">Уборка гладких напольных покрытий.</div>
+          <div class="tms-p tms-i">Эффективная очистка мягкой мебели от волос и шерсти.</div>
+          <div class="tms-p tms-i">Тщательный сбор пыли и мусора в труднодоступных местах.</div>
+        </div>
+        <div class="tms-item">
+          <video class="tms-lazy-video tms-img-100" poster="img/tms-v-3.jpg" autoplay="true" loop="true" muted="muted">
+            <source data-src="https://thomas.support/dl/media/2021/6/b15534.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </div>
+      <div class="tms-section tms-2-col tms-reverse">
+        <div class="tms-item">
+          <div class="tms-header">
+            <div class="tms-h2">Влажная уборка</div>
+          </div>
+          <div class="tms-p tms-i">Влажная чистка (мытьё) ковров и ковровых покрытий.</div>
+          <div class="tms-p tms-i">Влажная уборка твёрдых напольных покрытий.</div>
+          <div class="tms-p tms-i">Глубокое мытьё (стирка) обивки мягкой мебели.</div>
+          <div class="tms-p tms-i">Минимальная остаточная влажность после уборки.</div>
+        </div>
+        <div class="tms-item">
+          <video class="tms-lazy-video tms-img-100" poster="img/tms-v-4.jpg" autoplay="true" loop="true" muted="muted">
+            <source data-src="https://thomas.support/dl/media/2021/4/b15072.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </div>
+      <div class="tms-section tms-2-col">
+        <div class="tms-item">
+          <div class="tms-header">
+            <div class="tms-h2">Сбор жидкости</div>
+          </div>
+          <div class="tms-p">Аварийный сбор воды в помещении, позволяющий в короткий срок собрать большой объём жидкости и избежать последующих затрат на восстановительные ремонты помещений и мебели.</div>
+        </div>
+        <div class="tms-item">
+          <video class="tms-lazy-video tms-img-100" poster="img/tms-v-5.jpg" autoplay="true" loop="true" muted="muted">
+            <source data-src="https://thomas.support/dl/media/2021/4/b15075.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </div>
+      <div class="tms-section">
+        <div class="tms-header tms-center">
+          <div class="tms-h2">Эргономика и удобство конструкции</div>
+        </div>
+        <div class="tms-content tms-3-col">
+          <div class="tms-item tms-card"><img class="tms-img-100" src="img/tms-10-1.jpg" alt="4-х ступенчатый электронный регулятор мощности"/>
+            <div class="tms-card-text">
+              <div class="tms-p">4-х ступенчатый электронный регулятор мощности и память последнего режима.</div>
+              <div class="tms-p">Режим «ЭКО» для работы пылесоса в качестве воздухоочистителя.</div>
             </div>
           </div>
-          <div class="tms-item"><img class="tms-img-resp" src="img/tms-section-4-img-2.png" alt="Для использования режима влажной уборки достаточно: залить воду в наружный резервуар"/>
-            <div class="tms-text">
-              <div class="tms-p">Для использования режима влажной уборки достаточно: залить воду в наружный резервуар, при необходимости добавить моющий концентрат <strong>Thomas ProTex </strong>(есть в комплекте), по окончании уборки вылить грязную воду из внутреннего контейнера.</div>
+          <div class="tms-item tms-card"><img class="tms-img-100" src="img/tms-10-2.jpg" alt="Механическое управления мощностью на рукоятке шланга."/>
+            <div class="tms-card-text">
+              <div class="tms-p">Механическое управление мощностью на рукоятке шланга для комфортной очистки тонких текстильных поверхностей.</div>
             </div>
           </div>
-          <div class="tms-item"><img class="tms-img-resp" src="img/tms-section-4-img-3.png" alt="Для быстрой уборки можно использовать HEPA-мешок"/>
-            <div class="tms-text">
-              <div class="tms-p">Для быстрой уборки или сбора специфического мусора вместо аквабокса можно использовать HEPA-мешок, с которым пылесос готов к работе в любой момент.</div>
+          <div class="tms-item tms-card"><img class="tms-img-100" src="img/tms-10-3.jpg" alt="Горизонтальная и вертикальная парковка для компактного хранения."/>
+            <div class="tms-card-text">
+              <div class="tms-p">Горизонтальная и вертикальная парковка для компактного хранения.</div>
+            </div>
+          </div>
+          <div class="tms-item tms-card"><img class="tms-img-100" src="img/tms-10-4.jpg" alt="Передние ролики и большие задние колеса для манёвренности."/>
+            <div class="tms-card-text">
+              <div class="tms-p">Передние ролики и большие задние колеса для манёвренности.</div>
+            </div>
+          </div>
+          <div class="tms-item tms-card"><img class="tms-img-100" src="img/tms-10-5.jpg" alt="Автоматическая смотка кабеля."/>
+            <div class="tms-card-text">
+              <div class="tms-p">Автоматическое сматывание кабеля. Радиус уборки от одной розетки — 11 м.</div>
+            </div>
+          </div>
+          <div class="tms-item tms-card"><img class="tms-img-100" src="img/tms-10-6.jpg" alt="Хранение аксессуаров на корпусе во время уборки."/>
+            <div class="tms-card-text">
+              <div class="tms-p">Хранение аксессуаров на корпусе во время уборки.</div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="tms-section-5">
-      <div class="tms-wrap">
-        <div class="tms-header">
-          <div class="tms-h1">Сухая уборка</div>
-        </div>
-        <div class="tms-content">
-          <div class="tms-item"><a href="https://thomas.support/r/1709" target="_blank">
-              <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-5-img-1.jpg" alt="Качественная очистка ковровых и гладких напольных покрытий специальной переключаемой насадкой ковёр/пол для уборки шерсти животных."/></div></a>
-            <div class="tms-p">Качественная очистка ковровых и гладких напольных покрытий специальной переключаемой насадкой ковёр/пол для уборки шерсти животных.</div>
-          </div>
-          <div class="tms-item"><a href="https://thomas.support/r/1710" target="_blank">
-              <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-5-img-2.jpg" alt="Простой и быстрый сбор волос, шерсти и другого налипающего мусора, глубокая чистка ковров с помощью турбощетки."/></div></a>
-            <div class="tms-p">Простой и быстрый сбор волос, шерсти и другого налипающего мусора, глубокая чистка ковров с помощью турбощетки.</div>
-          </div>
-          <div class="tms-item"><a href="https://thomas.support/r/1711" target="_blank">
-              <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-5-img-3.jpg" alt="Тщательная чистка мягкой мебели, удаление шерсти и волос с обивки насадкой с увеличенным нитеподъемником."/></div></a>
-            <div class="tms-p">Тщательная чистка мягкой мебели, удаление шерсти и волос с обивки насадкой с увеличенным нитеподъемником.</div>
-          </div>
-          <div class="tms-item"><a href="https://thomas.support/r/1712" target="_blank">
-              <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-5-img-4.jpg" alt="Уборка пыли и мусора в наиболее труднодоступных местах (например, между подушками мягкой мебели) с помощью удлинённой (360 мм) щелевой насадки."/></div></a>
-            <div class="tms-p">Уборка пыли и мусора в наиболее труднодоступных местах (например, между подушками мягкой мебели) с помощью удлинённой (360 мм) щелевой насадки.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tms-section-6">
-      <div class="tms-wrap">
-        <div class="tms-header">
-          <div class="tms-h1">Влажная уборка и сбор жидкостей</div>
-        </div>
-        <div class="tms-content">
-          <div class="tms-item"><a href="https://thomas.support/r/1715" target="_blank">
-              <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-6-img-1.jpg" alt="Влажная чистка ковров широкой моющей насадкой."/></div></a>
-            <div class="tms-p">Влажная чистка ковров широкой моющей насадкой. Во время мытья ковры промываются на всю глубину ворса, улучшается вид текстильных покрытий, без следа исчезают пятна и быстро удаляются случайные загрязнения. Использование моющего концентрата THOMAS ProTex делает влажную уборку текстильных поверхностей ещё более эффективной.</div>
-          </div>
-          <div class="tms-item"><a href="https://thomas.support/r/1716" target="_blank">
-              <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-6-img-2.jpg" alt="Качественное и комфортное мытьё гладких напольных покрытий."/></div></a>
-            <div class="tms-p">Качественное и комфортное мытьё гладких напольных покрытий (кафеля, линолеума и т. п.) с помощью широкой моющей насадки с адаптером-щёткой. Насадка хорошо очищает пол, не оставляет разводов и просушивает поверхность.</div>
-          </div>
-          <div class="tms-item"><a href="https://thomas.support/r/1713" target="_blank">
-              <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-6-img-3.jpg" alt="Эффективная влажная уборка мягкой мебели."/></div></a>
-            <div class="tms-p">Эффективная влажная уборка мягкой мебели и других текстильных изделий узкой моющей насадкой. Влажная чистка обновляет вид обивки мягкой мебели, помогает быстро и легко удалить пятна и случайные загрязнения.</div>
-          </div>
-          <div class="tms-item"><a href="https://thomas.support/r/1714" target="_blank">
-              <div class="tms-youtube-card"><img class="tms-img-resp" src="img/tms-section-6-img-4.jpg" alt="Быстрый сбор мокрой грязи."/></div></a>
-            <div class="tms-p">Быстрый сбор мокрой грязи, а также больших объёмов жидкости. В экстренной ситуации эта функция поможет ликвидировать последствия аварии (например, потопа) и свести к минимуму ущерб.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tms-section-7">
-      <div class="tms-wrap">
-        <div class="tms-header">
-          <div class="tms-h1">Преимущества</div>
-        </div>
-        <div class="tms-content">
-          <div class="tms-item">
-            <div class="tms-p"><span class="tms-i"> <strong>Made in Germany</strong></span><br/><span class="tms-i">Водяной фильтр <strong>AquaBox</strong></span><br/><span class="tms-i"> <strong>HEPA-мешок </strong>XXL объёма</span><br/><span class="tms-i">Возможность установки циклонного фильтра <strong>THOMAS DryBOX </strong>(в комплект не входит)</span><br/><span class="tms-i">Моющийся фильтр НЕРА</span><br/><span class="tms-i">Эффективная очистка ковров, полов и мебели от шерсти животных</span><br/><span class="tms-i">Влажная уборка пола и мягкой мебели</span></div>
-          </div>
-          <div class="tms-item"><img class="tms-img-resp" src="img/tms-section-7-img.png" alt="Thomas Pet&amp;amp;Family"/></div>
-          <div class="tms-item">
-            <div class="tms-p"><span class="tms-i">Сбор сухого и мокрого мусора</span><br/><span class="tms-i">Наружный съёмный резервуар для влажной уборки</span><br/><span class="tms-i">Компактность и манёвренность</span><br/><span class="tms-i">2 положения парковки (горизонтальное и вертикальное)</span><br/><span class="tms-i">Четырехступенчатая электронная регулировка мощности <strong>TouchTronic</strong></span><br/><span class="tms-i">Противоударный корпус</span><br/><span class="tms-i">Большой радиус действия</span><br/><span class="tms-i">Автоматическая смотка кабеля</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tms-section-8">
-      <div class="tms-wrap">
-        <div class="tms-header">
-          <div class="tms-h1">Технические характеристики</div>
-        </div>
-        <div class="tms-content">
-          <div class="tms-card tms-h3">Мощность двигателя<br/><strong>1700 Вт</strong></div>
-          <div class="tms-card tms-h3">Объём всасываемой воды в режиме влажной уборки<br/><strong>2,5 л</strong></div>
-          <div class="tms-card tms-h3">Объём всасываемой воды в режиме сбора жидкостей<br/><strong>2,5 л</strong></div>
-          <div class="tms-card tms-h3">Производительность насоса моющего средства<br/><strong>0,35 л/мин</strong></div>
-          <div class="tms-card tms-h3">Радиус уборки<br/><strong>11 м</strong></div>
-          <div class="tms-card tms-h3">Габариты:<br/>длина – <strong>486 мм, </strong>ширина – <strong>318 мм, </strong>высота – <strong>306 мм</strong></div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </div> <script>
+  window.onresize = function(){send_mes()}
+  window.addEventListener("load", function(event) {send_mes()});
+
+  function send_mes(){
+    var str='transform,'+document.body.scrollHeight+','+ window.innerHeight+',`lending1`'
+    if(document.body.scrollHeight > window.innerHeight ){
+    	parent.postMessage(str,"*");
+    }
+  }
+</script>
+
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+  var lazyLoadVideos = [].slice.call(document.querySelectorAll("video.tms-lazy-video"));
+   if ("IntersectionObserver" in window) {
+    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+     entries.forEach(function(video) {
+      if (video.isIntersecting) {
+       for (var source in video.target.children) {
+        var videoSource = video.target.children[source];
+        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+         videoSource.src = videoSource.dataset.src;
+        }
+       }
+       video.target.load();
+       video.target.classList.remove("tms-lazy-video");
+       lazyVideoObserver.unobserve(video.target);
+      }
+     });
+    });
+    lazyLoadVideos.forEach(function(lazyVideo) {
+     lazyVideoObserver.observe(lazyVideo);
+    });
+   }
+ });
+</script>
+
 </body>
